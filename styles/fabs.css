@@ -1,0 +1,86 @@
+:root{
+   --main-color: rgba(36,46,99,1);
+}
+
+/* Fabs DIV */
+.fabs {
+   --_viewport-margin: 2.5vmin;
+
+   position: fixed;
+   z-index: 11;
+
+   inset-block: auto var(--_viewport-margin);
+   inset-inline: auto var(--_viewport-margin);
+   display: flex;
+   flex-direction: column-reverse;
+   place-items: center;
+   gap: var(--_viewport-margin);
+}
+
+/* Fab buttons */
+.fab {
+   --_size: 2.5rem;
+
+   padding: calc(var(--_size) / 2);
+   border: none;
+   border-radius: 50%;
+   aspect-ratio: 1;
+   -webkit-box-shadow: 10px 10px 38px 0px rgba(0, 0, 0, 0.75);
+   -moz-box-shadow: 10px 10px 38px 0px rgba(0, 0, 0, 0.75);
+   box-shadow: 10px 10px 38px 0px rgba(0, 0, 0, 0.75);
+
+   /* light button and button hover */
+   --_light-bg: var(--main-color);
+   --_light-bg-hover: var(--main-hover);
+
+   /* dark button and button hover */
+   --_dark-bg: var(--main-color);
+   --_dark-bg-hover: var(--main-hover);
+
+   /* adaptive variables set to light by default */
+   --_bg: var(--_light-bg);
+
+   /* static icon colors set to the adaptive foreground variable */
+   --_light-fg: white;
+   --_dark-fg: black;
+   --_fg: var(--_light-fg);
+
+   /* use the adaptive properties on some styles */
+   background: var(--_bg);
+   color: var(--_fg) !important;
+
+   /* if users prefers dark, set adaptive props to dark */
+   @media (prefers-color-scheme: dark) {
+      --_bg: var(--_dark-bg);
+      --_fg: var(--_dark-fg);
+   }
+
+   -webkit-tap-highlight-color: transparent;
+}
+
+/* fab button states */
+.fab:active,
+.fab:hover,
+.fab:focus-visible {
+   background-color: #aaa !important;
+}
+
+/* fab button icons */
+.fab > svg {
+   --_size: 2.5rem;
+   inline-size: var(--_size);
+   block-size: var(--_size);
+   stroke-width: 3px;
+}
+
+/* fab overrides for smaller fab buttons */
+.mini-fab {
+   --_size: 1.5rem;
+   padding: calc(var(--_size) / 2);
+}
+
+.mini-fab > svg {
+   --_size: 1.5rem;
+   inline-size: var(--_size);
+   block-size: var(--_size);
+}

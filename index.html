@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Jquery Terminal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/2.36.0/js/jquery.terminal.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/2.36.0/css/jquery.terminal.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Main styles -->
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/card.css" />
+    <link rel="stylesheet" href="./styles/fabs.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />    
+  </head>
+  <body>
+    <div class="contaier-fluid site-wrapper">
+      <div class="container-lg d-flex justify-content-center">
+        <h1><a id="title" class="title" href="#">evanrobertson.dev&nbsp</a></h1>
+      </div>      
+      <div class="container-lg terminal" id="terminal"></div>
+      <div class="container-lg d-flex justify-content-center" id="gallery">
+         <div class="devcard mt-5">
+            <div class="main align-center">
+               <h2>Gallery is a work in progress! Return to the terminal to read more about my projects. Thanks for visiting!</h2>
+            </div>
+         </div>
+      </div>
+      <!-- FAB buttons -->
+      <div class="fabs" role="group" aria-label="Floating action buttons">
+         <!-- FAB Menu Button -->
+         <button
+            data-icon="bi-three-dots-vertical"
+            class="fab btn"
+            aria-label="Show Terminal"
+            aria-hidden="true"
+            title="Show Terminal"
+            id="fab_menu_btn"
+         >
+         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-terminal" viewBox="0 0 16 16">
+            <path d="M6 9a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3A.5.5 0 0 1 6 9zM3.854 4.146a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708l-2-2z"/>
+            <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h12z"/>
+          </svg>
+         </button>
+      <hr style="border-color: transparent;"/>
+    </div>
+    <script>
+      /* start hidden, as the FAB button doesn't do anything until the 
+      terminal on the page is hidden*/
+      $("#fab_menu_btn").hide();
+      $("#gallery").addClass("d-none");
+    </script>
+    <!-- Control Terminal -->
+    <script src="./scripts/terminal.js"></script>
+    <!-- FAB Buttons -->
+    <script src="./scripts/fabs.js"></script>
+  </body>
+</html>
