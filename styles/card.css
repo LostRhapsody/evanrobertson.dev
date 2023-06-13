@@ -10,8 +10,7 @@
   -webkit-backdrop-filter: blur(7px);
   overflow: hidden;
       transition: .7s all;    
-  margin-right:2.5rem;
-  margin-left:2.5rem;
+   margin: auto;  
   .main{
       transition: .7s all;    
 
@@ -54,7 +53,7 @@
    background-position: center; /* Center the image */
    background-repeat: no-repeat; /* Do not repeat the image */
    background-color: #323437;
-   filter: opacity(0.3);      
+   filter: opacity(1);      
    ::before {
           transition: .7s all;    
       filter: opacity(1);      
@@ -70,7 +69,7 @@
    background-position: center; /* Center the image */
    background-repeat: no-repeat; /* Do not repeat the image */
    background-color: #000000;
-   filter: opacity(0.3);      
+   filter: opacity(1);      
    ::before {
           transition: .7s all;    
       filter: opacity(1);      
@@ -88,7 +87,7 @@
    background-size: contain;
    background-color: #000000;
    color: black;
-   filter: opacity(0.3);    
+   filter: opacity(1);    
    ::before {
       transition: .7s all;    
       filter: opacity(1);      
@@ -102,4 +101,14 @@
 
 .gallery-row {
    margin-bottom: 10rem;
+}
+
+@media only screen and (min-width: 768px) {
+   .devcard {
+      margin-right:2.5rem;
+      margin-left:2.5rem;
+   }
+   .slothtime-card, .rhapsody-card, .capydocs-card{
+      filter: opacity(0.3);
+   }
 }
