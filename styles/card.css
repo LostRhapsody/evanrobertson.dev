@@ -9,8 +9,12 @@
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
   overflow: hidden;
-  transition: .5s all;  
+      transition: .7s all;    
+  margin-right:2.5rem;
+  margin-left:2.5rem;
   .main{
+      transition: .7s all;    
+
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -29,9 +33,10 @@
     left: -100%;
     transform: rotate(-45deg);
     height: 60rem;
-    transition: .7s all;
+    transition: .7s all;  
   }
   &:hover{
+    transition: .7s all;  
     border: 1px solid #ffffff44;
     box-shadow: 0 7px 50px 10px #000000aa;
     transform: scale(1.015);
@@ -42,4 +47,59 @@
       left: 200%;
     }
   }
+}
+
+.slothtime-card {
+   background-image: url("../static/sloth-icon.svg");
+   background-position: center; /* Center the image */
+   background-repeat: no-repeat; /* Do not repeat the image */
+   background-color: #323437;
+   filter: opacity(0.3);      
+   ::before {
+          transition: .7s all;    
+      filter: opacity(1);      
+   }
+   &:hover {
+        transition: .7s all;  
+      filter: opacity(1);      
+   }
+}
+
+.capydocs-card {
+   background-image: url("../static/capy.svg");
+   background-position: center; /* Center the image */
+   background-repeat: no-repeat; /* Do not repeat the image */
+   background-color: #000000;
+   filter: opacity(0.3);      
+   ::before {
+          transition: .7s all;    
+      filter: opacity(1);      
+   }
+   &:hover {
+        transition: .7s all;  
+      filter: opacity(1);      
+   }
+}
+
+.rhapsody-card {
+   background-image: url("../static/rhapsody.png");
+   background-position: center; /* Center the image */
+   background-repeat: no-repeat; /* Do not repeat the image */
+   background-size: contain;
+   background-color: #000000;
+   color: black;
+   filter: opacity(0.3);    
+   ::before {
+      transition: .7s all;    
+      filter: opacity(1);      
+   }
+   &:hover {
+      transition: .7s all;  
+      filter: opacity(1);      
+      
+   }
+}
+
+.gallery-row {
+   margin-bottom: 10rem;
 }

@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>evanrobertson.dev</title>
+    <link
+         rel="icon"
+         type="image/x-icon"
+         href="./favicon.ico"
+      />
     <!-- Jquery -->
     <script
       src="https://code.jquery.com/jquery-3.7.0.min.js"
@@ -39,6 +44,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />    
+
   </head>
   <body>
     <div class="contaier-fluid site-wrapper">
@@ -47,11 +53,30 @@
       </div>      
       <div class="container-lg terminal" id="terminal"></div>
       <div class="container-lg d-flex justify-content-center" id="gallery">
-         <div class="devcard mt-5">
-            <div class="main align-center">
-               <h2>Gallery is a work in progress! Return to the terminal to read more about my projects. Thanks for visiting!</h2>
+         <div class="row gallery-row">
+            <div class="col">
+               <div id="slothtime-card" class="devcard mt-5 slothtime-card">
+                  <div class="main align-center">
+                     <h2>Slothtime</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="col">
+               <div id="capydocs-card" class="devcard mt-5 capydocs-card">
+                  <div class="main align-center">
+                     <h2>CapyDocs</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="col">
+               <div id="rhapsody-card" class="devcard mt-5 rhapsody-card">
+                  <div class="main align-center">
+                     <h2>Rhapsody Web Design</h2>
+                  </div>
+               </div>
             </div>
          </div>
+         <hr style="border-color: transparent;"/>
       </div>
       <!-- FAB buttons -->
       <div class="fabs" role="group" aria-label="Floating action buttons">
@@ -69,17 +94,54 @@
             <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h12z"/>
           </svg>
          </button>
+      </div>
       <hr style="border-color: transparent;"/>
-    </div>
+      <!-- Modals -->
+      <div id="galleryModal" data-bs-theme="dark" class="modal fade modal-lg" tabindex="-1">
+         <div class="modal-dialog">
+           <div class="modal-content">
+             <div class="modal-header">
+               <h5 id="modal-title" class="modal-title"></h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+             </div>
+             <div class="modal-body">
+               <div class="row justify-content-center">
+                  <img id="modal-image">
+               </div>
+               <p id="modal-text">haofha</p>
+             </div>
+             <div class="modal-footer">
+               <button id="modal-web-button" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Open Website</button>
+             </div>
+           </div>
+         </div>
+       </div>
+       <div id="alert-modal" data-bs-theme="dark" class="modal fade modal-lg" tabindex="-1">
+         <div class="modal-dialog">
+           <div class="modal-content">
+             <div class="modal-header">
+               <h5 id="modal-title" class="modal-title">Message from evanrobertson.dev</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+             </div>
+             <div class="modal-body">
+               <p id="modal-text">You're hiding the terminal. Some options may be unavailable without it.<br/>To show the terminal again, click the button in the bottom righ of your screen.<br/>Click anywhere to dismiss this message.</p>
+             </div>
+           </div>
+         </div>
+       </div>
     <script>
+      let galleryView = true;
       /* start hidden, as the FAB button doesn't do anything until the 
       terminal on the page is hidden*/
       $("#fab_menu_btn").hide();
       $("#gallery").addClass("d-none");
+
     </script>
     <!-- Control Terminal -->
     <script src="./scripts/terminal.js"></script>
     <!-- FAB Buttons -->
     <script src="./scripts/fabs.js"></script>
+    <!-- Modal -->
+    <script src="./scripts/modals.js"></script>
   </body>
 </html>

@@ -20,14 +20,18 @@ body {
 .terminal-image {
    width: 50vw;
    height: auto;
+   border: 5px solid #5d5d5d4f;
+   padding: 0.3rem;
+   border-radius: 3rem;
+   margin: 1rem;
 }
 
 .terminal {
-   font-size: 1rem;
-   margin-top: 25vh;
-   margin-bottom: 25vh;
-   border: 1px solid #ffffff22;
-   background-color: transparent;
+  font-size: 1rem;   
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  border: 1px solid #ffffff22;
+  background-color: transparent;
   box-shadow: 0 7px 20px 5px #00000088;
   border-radius: .7rem;
   backdrop-filter: blur(7px);
@@ -89,4 +93,21 @@ a:visited {
       }
     } 
    
+}
+
+.link {
+   text-decoration: underline;
+   transition: all .5s;
+}
+
+.link:hover {
+   filter: brightness(0.5);
+   transition: all .5s;
+}
+
+@media only screen and (min-width: 768px) {
+   .terminal{
+      margin-top: 25vh;
+      margin-bottom: 25vh;
+   }
 }

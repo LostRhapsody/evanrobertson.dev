@@ -1,8 +1,10 @@
+const alertModal = new bootstrap.Modal(document.getElementById('alert-modal'));
+
 $("#terminal").focus();
 $("#terminal").terminal({
-   list:function() {
+   help:function() {
       this.echo(
-         "list     - outputs a list of commands\n" +
+         "help     - outputs a list of commands\n" +
          "projects - outputs a list of my projects\n" + 
          "project  - outputs specific information about a single project. Provide a project name as an argument. Ex: project slothtime\n" + 
          "open     - opens a new tab to a project. Provide a project name as an argument. Ex: open slothtime\n" +
@@ -56,7 +58,7 @@ $("#terminal").terminal({
             "What is Rhapsody Web Design?\n" +
             "In short, not much. A side business I've opened primarly for doing websites for friends, families, and local small business that are interested.\n" +
             "If you're in the market for a handcrafted website that's fast, secure, stress free and easy to use with optional tech support, contact me at evan@rhapsodyweb.ca\n" +
-            "I've worked on the websites for 10+ large clothing suppliers, several product pages for Shark|Ninja US, and many small from-scratch personal websites, like this one and my other projects.\n" +
+            "I've worked on the websites for plenty of domestic and international businesses, several product pages for Shark|Ninja US, and many small from-scratch personal websites, like this one and my other projects.\n" +
             "You can see the marketing page for Rhapsody Web Design here (WIP): https://rhapsodyweb.ca/\n"
          )
       }
@@ -111,14 +113,14 @@ $("#terminal").terminal({
       window.open("https://rhapsodyweb.ca");
    },
    gallery:function(){
-      alert("Message from evanrobetson.dev:\nYou're hiding the terminal. Some options may be unavailable without it. To show the terminal again, click the button in the bottom righ of your screen.");
+      alertModal.show();      
       this.hide();
       $("#fab_menu_btn").show();
       $("#gallery").removeClass("d-none");   
    }
 },{
    greetings: "Welcome to evanrobertson.dev, an interactive personal portfolio.\n" + 
-              "Type 'list' to view a list of available commands\n" + 
+              "Type 'help' to view a list of available commands\n" + 
               "Don't feel like typing commands? Just type 'gallery' to view a more traditional portfolio experience.\n"
 });
 
