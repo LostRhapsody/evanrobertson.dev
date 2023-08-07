@@ -109,6 +109,6 @@
       margin-left:2.5rem;
    }
    .slothtime-card, .rhapsody-card, .capydocs-card{
-      filter: opacity(0.3);
+      filter: opacity(0.6);
    }
 }
